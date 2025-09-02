@@ -8,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -40,7 +39,7 @@ public class AuthenticationService {
 
     public AuthenticationResponse register(RegisterRequest request) {
         var user = User.builder()
-                .id(0)
+
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
                 .email(request.getEmail())
@@ -51,9 +50,9 @@ public class AuthenticationService {
                 .build();
 
         // if MFA enabled --> Generate Secret
-        if (request.isMfaEnabled()) {
-            user.setSecret(tfaService.generateNewSecret());
-        }
+//        if (request.isMfaEnabled()) {
+//            user.setSecret(tfaService.generateNewSecret());
+//        }
         repository.save(user);
         var jwtToken = jwtService.generateToken(user);
         var refreshToken = jwtService.generateRefreshToken(user);
@@ -121,9 +120,9 @@ public class AuthenticationService {
                 .orElseThrow(() -> new EntityNotFoundException(
                         String.format("No user found with %S", verificationRequest.getEmail()))
                 );
-        if (tfaService.isOtpNotValid(user.getSecret(), verificationRequest.getCode())) {
-            throw new BadCredentialsException("Code is not correct");
-        }
+//        if (tfaService.isOtpNotValid(user.getSecret(), verificationRequest.getCode())) {
+//            throw new BadCredentialsException("Code is not correct");
+//        }
         var jwtToken = jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .accessToken(jwtToken)
