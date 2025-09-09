@@ -1,7 +1,6 @@
 package pl.wblo.jwtmodule.restobjects;
 
 import lombok.Data;
-import pl.wblo.appmodule.repository.entity.User;
 import pl.wblo.jwtmodule.security.config.Role;
 
 import java.io.Serializable;
@@ -25,10 +24,5 @@ public class RegisterRequestObj implements Serializable {
         this.password = password;
         this.role = role;
         this.mfaEnabled = mfaEnabled;
-    }
-
-    public static RegisterRequestObj getUserDto(User user) {
-        return new RegisterRequestObj(user.getFirstname(), user.getLastname(), user.getEmail(), user.getPassword(), user.getRole(),
-                user.isMfaEnabled());
     }
 }
