@@ -12,6 +12,7 @@ module jwt.auth.module {
     requires spring.data.jpa;
     requires spring.tx;
     requires spring.data.commons;
+    requires spring.aop;
     
     // Jakarta EE
     requires jakarta.persistence;
