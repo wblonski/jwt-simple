@@ -1,18 +1,23 @@
 package pl.wblo.jwt.restobjects;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-
 import java.io.Serializable;
 
-@NoArgsConstructor
-@AllArgsConstructor
 //@Data
-@Builder
 public class VerifyRequestObj implements Serializable {
     private String email;
     private String code;
+    
+    public VerifyRequestObj(String email, String code) {
+        this.email = email;
+        this.code = code;
+    }
+    
+    public VerifyRequestObj() {
+    }
+    
+    public static VerifyRequestObjBuilder builder() {
+        return new VerifyRequestObjBuilder();
+    }
     
     public String getEmail() {
         return email;
@@ -28,5 +33,31 @@ public class VerifyRequestObj implements Serializable {
     
     public void setCode(final String code) {
         this.code = code;
+    }
+    
+    public static class VerifyRequestObjBuilder {
+        private String email;
+        private String code;
+        
+        VerifyRequestObjBuilder() {
+        }
+        
+        public VerifyRequestObjBuilder email(String email) {
+            this.email = email;
+            return this;
+        }
+        
+        public VerifyRequestObjBuilder code(String code) {
+            this.code = code;
+            return this;
+        }
+        
+        public VerifyRequestObj build() {
+            return new VerifyRequestObj(this.email, this.code);
+        }
+        
+        public String toString() {
+            return "VerifyRequestObj.VerifyRequestObjBuilder(email=" + this.email + ", code=" + this.code + ")";
+        }
     }
 }
