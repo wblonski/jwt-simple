@@ -64,7 +64,7 @@ Content-Type: application/json
 
 {
   "email": "jan.kowalski@domain.com",
-  "code": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW4ua293YWxza2lAZG9tYWluLmNvbSIsImlhdCI6MTc1Njk2MzMyMywiZXhwIjoxNzU3NTY4MTIzfQ.MQCDfuq58QvLKdSmdjACixvg5QHjuGvbBAV1o12d6KY"
+  "code": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW4ua293YWxza2lAZG9tYWluLmNvbSIsImlhdCI6MTc1NzMwODk0NiwiZXhwIjoxNzU3Mzk1MzQ2fQ.ZW6LpGyaWL4xlIOr64hQbQMA5Mf4XVle1IcsBiIJ_cM"
 }
 ### Response:
 ### {
@@ -76,3 +76,4 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8080/api/v1/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYW4ua293YWxza2lAZG9tYWluLmNvbSIsImlhdCI6MTc1NzMwODk0NiwiZXhwIjoxNzU3Mzk1MzQ2fQ.ZW6LpGyaWL4xlIOr64hQbQMA5Mf4XVle1IcsBiIJ_cM
