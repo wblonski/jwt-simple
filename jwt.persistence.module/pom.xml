@@ -3,17 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>pl.wblo.jwt</groupId>
+        <artifactId>jwt-root</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>pl.wblo.module</groupId>
     <artifactId>jwt-persistence</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>jwt.persistence</name>
+    <name>jwt.persistence.module</name>
     <description>Persistence module for JWT security</description>
 
     <url/>
@@ -32,9 +32,7 @@
     </scm>
 
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
+        <start-class></start-class>
     </properties>
 
     <dependencies>
@@ -91,6 +89,7 @@
             <version>2.19.2</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
