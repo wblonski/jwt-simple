@@ -3,38 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>pl.wblo.jwt</groupId>
+        <artifactId>jwt-simple</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>pl.wblo.module</groupId>
     <artifactId>jwt-persistence</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>jwt.persistence</name>
+    <name>jwt.persistence.module</name>
     <description>Persistence module for JWT security</description>
 
     <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
-
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
+        <start-class></start-class>
     </properties>
 
     <dependencies>
@@ -45,17 +29,14 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.42</version>
         </dependency>
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
-            <version>3.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -68,59 +49,31 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>3.5.5</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot</artifactId>
-            <version>3.5.5</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>6.2.11</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.19.2</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.19.2</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                &lt;!&ndash;                <executions>&ndash;&gt;-->
-<!--                &lt;!&ndash;                    <execution>&ndash;&gt;-->
-<!--                &lt;!&ndash;                        <goals>&ndash;&gt;-->
-<!--                &lt;!&ndash;                            <goal>build-image</goal>&ndash;&gt;-->
-<!--                &lt;!&ndash;                        </goals>&ndash;&gt;-->
-<!--                &lt;!&ndash;                    </execution>&ndash;&gt;-->
-<!--                &lt;!&ndash;                </executions>&ndash;&gt;-->
-<!--                <configuration>-->
-<!--                    <jvmArguments>-->
-<!--                        &#45;&#45;add-opens=java.base/java.lang=ALL-UNNAMED-->
-<!--&lt;!&ndash;                        &#45;&#45;add-opens=java.base/java.util=ALL-UNNAMED&ndash;&gt;-->
-<!--&lt;!&ndash;                        &#45;&#45;add-opens=java.base/java.lang.reflect=ALL-UNNAMED&ndash;&gt;-->
-<!--&lt;!&ndash;                        &#45;&#45;add-opens=java.base/java.text=ALL-UNNAMED&ndash;&gt;-->
-<!--&lt;!&ndash;                        &#45;&#45;add-opens=java.desktop/java.awt.font=ALL-UNNAMED&ndash;&gt;-->
-<!--                    </jvmArguments>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 </project>

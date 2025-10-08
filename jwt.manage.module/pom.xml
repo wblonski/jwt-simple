@@ -3,37 +3,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>pl.wblo.jwt</groupId>
+        <artifactId>jwt-simple</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>pl.wblo.module</groupId>
-    <artifactId>jwt-management</artifactId>
+    <artifactId>jwt-management.module</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-<!--    <packaging>pom</packaging>-->
 
     <name>jwt.management</name>
-    <description>Manegement module of JWT Authorisation</description>
+    <description>Manegement module of JWT Security Authorisation</description>
     <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
     <properties>
         <java.version>17</java.version>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.source>17</maven.compiler.source>
-        <start-class>pl.wblo.domain.Application</start-class>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <start-class></start-class>
+
     </properties>
 
     <dependencies>
@@ -52,17 +41,14 @@
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
             <artifactId>swagger-annotations-jakarta</artifactId>
-            <version>2.2.36</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>6.2.11</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>6.2.11</version>
         </dependency>
     </dependencies>
 
